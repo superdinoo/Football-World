@@ -1,0 +1,143 @@
+.league{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.pole{
+    display: flex;
+    margin: auto;
+    width: 1100px;
+    height: 1100px;
+    position: absolute;
+    top: 50px;
+    left: 390px;
+    justify-content: flex-end;
+}
+.rpl {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 240px;
+    left: 880px;
+    align-items: center;  	
+}
+.rpl img{
+    display: flex;
+     background-color: black;
+     border-radius: 30px;
+     height: 130px;
+     width: 130px;
+     
+}
+.angl{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position:absolute;
+    top: 405px;
+    left: 687px;
+}
+.angl img{
+    display: flex;
+    background-color: black;
+    border-radius: 30px;
+    height: 130px;
+    width: 130px;
+}
+.france{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position:absolute;
+    top: 405px;
+    right: 710px;
+}
+.france img{
+    display: flex;
+    background-color: black;
+    border-radius: 30px;
+    height: 130px;
+    width: 130px;
+}
+.german{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 630px;
+    right: 1130px;
+}
+.german img{
+    display: flex;
+    background-color: black;
+    border-radius: 30px;
+    height: 130px;
+    width: 130px;
+}
+.usp{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 630px;
+    left: 1108px;
+}
+.usp img{
+    display: flex;
+    background-color: black;
+    border-radius: 30px;
+    height: 130px;
+    width: 130px;
+}
+.italia{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 560px;
+    left: 880px;
+}
+.italia img{
+    display: flex;
+    background-color: black;
+    border-radius: 30px;
+    height: 130px;
+    width: 130px;
+}
+
+.lef{
+    display: flex;
+    justify-content: flex-start;
+}
+.lef img{
+    border: 1px solid #000000;
+	background-color: black;
+	padding: 4px;
+    width: 462px;
+}
+.rig{
+    display: flex;
+    justify-content: flex-end;
+}
+.rig img{
+    border: 1px solid #000000;
+	background-color: black;
+	padding: 4px;
+    width: 483px;
+    position: absolute;
+    top: 152px;
+}
+p{
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size:lem;
+	font-family:"Kurale",Arial,Helvetica,sans-serif;
+    
+}
