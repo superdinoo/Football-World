@@ -30,7 +30,7 @@ const Header = () => {
 type="text"
 name="text"
 className="serch"
-placeholder="Поиск здесь!"
+placeholder="Поиск Здесь!"
 />
 <button
 type="submit"
