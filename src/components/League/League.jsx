@@ -8,10 +8,10 @@ const League = () => {
                 <img src="./img/pole.png" alt="Наш логотип"/> 
             </div>
             <a href="/" className="ligs-button">
-                <div className='rpl'>
-                    <img src="./img/rpl.jpg" alt="Наш логотип"/>
-                    <p>РПЛ</p>
-                    <p> Россия</p>
+                <div className='portugal'>
+                    <img src="./img/portugal.jpeg" alt="Наш логотип"/>
+                    <p>Лига Португалии</p>
+                    <p> Португалия</p>
                 </div>
                 <div className='angl'>
                     <img src="./img/angl.jpg"  alt="Наш логотип"/>
@@ -39,7 +39,7 @@ const League = () => {
                     <p> Италия</p>
                 </div>
                 </a>
-                <div className='main'>
+                <div className='leftRig'>
                     <div className='lef'>
                     <img src="./img/lef.jpg"  alt="Наш логотип"/>
                     </div>
