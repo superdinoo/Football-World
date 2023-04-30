@@ -1,6 +1,6 @@
 import React from 'react';
 import { RouterProvider , createBrowserRouter } from 'react-router-dom';
-import Leage from './pages/Leage';
+import Teams from './pages/Teams';
 import ErrorPage from './pages/ErrorPage';
 import './index.css';
 
@@ -8,7 +8,7 @@ function App() {
     const router = createBrowserRouter([
         {
           path: '/',
-          element: <Leage />,
+          element: <Teams />,
           errorElement: <ErrorPage />
         }
     ]);
