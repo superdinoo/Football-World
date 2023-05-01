@@ -1,59 +1,45 @@
 import React from 'react';
-import './Leaguestyle.css' ;
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import LeagueCard from '../LeagueCard';
+import style from './Leaguestyle.module.css';
 
+const apiCreate = axios.create({
+  baseURL: 'https://api.football-data.org/v2/competitions',
+  headers: { 'X-Auth-Token': '57cfaf485b6645c69da1e555276e4bd8' },
+});
 const League = () => {
-    return (
-        <div className='League'>
-            <div className='pole'>
-                <img src="./img/pole.png" alt="Наш логотип"/> 
-            </div>
-            <a href="/" className="ligs-button">
-                <div className='portugal'>
-                    <img src="./img/portugal.jpeg" alt="Наш логотип"/>
-                    <p>Лига Португалии</p>
-                    <p> Португалия</p>
-                </div>
-                <div className='angl'>
-                    <img src="./img/angl.jpg"  alt="Наш логотип"/>
-                    <p>Премьер Лига</p>
-                    <p> Англия</p>
-                </div>
-                <div className='france'>
-                    <img src="./img/france.jpg"  alt="Наш логотип"/>
-                    <p>Лига 1</p>
-                    <p> Франция</p>
-                </div>
-                <div className='german'>
-                    <img src="./img/german.jpg"  alt="Наш логотип"/>
-                    <p>Бундеслига</p>
-                    <p> Германия</p>
-                </div>
-                <div className='usp'>
-                    <img src="./img/usp.jpg"  alt="Наш логотип"/>
-                    <p>Ла-Лига</p>
-                    <p> Испания</p>
-                </div>
-                <div className='italia'>
-                    <img src="./img/italia.jpg"  alt="Наш логотип"/>
-                    <p>Серия А</p>
-                    <p> Италия</p>
-                </div>
-                </a>
-                <div className='leftRig'>
-                    <div className='lef'>
-                    <img src="./img/lef.jpg"  alt="Наш логотип"/>
-                    </div>
-                    <div className='rig'>
-                    <img src="./img/rig.jpg"  alt="Наш логотип"/>  
-                    </div>
-                </div>
-            
-        </div>
+  const [ligs, setLigs] = useState([]);
 
-
-
-
-        )
+  useEffect(() => {
+    async function fetchAllLigs() {
+      try {
+        const allLigs = await apiCreate.get();
+        console.log(allLigs);
+        setLigs(allLigs.data.competitions);
+      } catch (error) {
+        console.log(error);
+      }
 
     }
-export default League
+
+    fetchAllLigs();
+  }, []);
+
+  return ligs?.length ? (
+    <div className={style.league}>
+      {ligs.map((liga) => {
+        return (
+          <LeagueCard
+            key={liga.id}
+            name={liga.name}
+            area={liga.area.name}
+          />
+        );
+      })}
+    </div>
+  ) : (
+    <p style={{ color: 'black' }}>Loading...</p>
+  );
+  }
+export default League;

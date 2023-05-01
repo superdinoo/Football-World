@@ -1,0 +1,14 @@
+
+.teamCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.teamCard img{
+    display: flex;
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 30px;
+    height: 130px;
+    width: 130px;
+}

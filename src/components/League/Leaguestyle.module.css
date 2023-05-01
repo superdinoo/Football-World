@@ -1,18 +1,12 @@
 .league{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.pole{
-    display: flex;
-    margin: auto;
     width: 1100px;
     height: 1100px;
-    position: absolute;
-    top: 50px;
-    left: 390px;
-    justify-content: flex-end;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(/public/img/pole.png);
 }
+
+/* }
 .portugal {
     display: flex;
     flex-direction: column;
@@ -116,26 +110,6 @@
     height: 130px;
     width: 130px;
 }
-
-.leftRig{
-    display: flex;
-    justify-content: space-between;
-}
-.lef img{
-    border: 1px solid #000000;
-	background-color: black;
-	padding: 4px;
-    width: 500px;
-	
-}
-.rig img{
-    border: 1px solid #000000;
-	background-color: black;
-	padding: 4px;
-    width: 522px;
-   
-    
-}
 p{
     color: white;
     display: flex;
@@ -143,4 +117,4 @@ p{
     font-size:lem;
 	font-family:"Kurale",Arial,Helvetica,sans-serif;
     
-}
+} */

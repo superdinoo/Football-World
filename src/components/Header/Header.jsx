@@ -1,5 +1,6 @@
 import React from 'react';
 import './Headerstyle.css' ;
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -9,14 +10,14 @@ const Header = () => {
             <div className='img'>
                 <img src="./img/logo.png" alt="Наш логотип"/>  
         </div>
-            <a href="/" className="header-button">
+            <Link to="/" className="header-button">
             <br/>
             Лиги
-            </a>
-        <a href="/" className="header-button">
+            </Link> 
+        <Link to="/teams" className="header-button">
             <br/>
             Команды
-            </a>
+            </Link>
         </div>
 <div className='social'>
         <a href = "https://vk.com/super_dinoo" ><img src="./img/vk.png" alt='вк'className = "icone"/></a>
