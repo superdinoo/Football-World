@@ -10,12 +10,10 @@ const Header = () => {
             <div className='img'>
                 <img src="./img/logo.png" alt="Наш логотип"/>  
         </div>
-            <Link to="/" className="header-button">
-            <br/>
+            <Link to="/" className="headerButton">
             Лиги
             </Link> 
-        <Link to="/teams" className="header-button">
-            <br/>
+        <Link to="/teams" className="headerButton">
             Команды
             </Link>
         </div>

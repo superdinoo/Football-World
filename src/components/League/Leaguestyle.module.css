@@ -5,3 +5,9 @@
     background-size: contain;
     background-image: url(/public/img/pole.png);
 }
+.text{
+    color: white;
+}
+p{
+    color: white;
+}
