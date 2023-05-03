@@ -4,10 +4,9 @@ import './Footerstyle.css' ;
 const Footer = () => {
     return (
     <div className='footer'>
-    <p>Football World- уникальный сайт футбольной статистики.
-    <br/>Компания © Football World. Все права защищены.
-    <br/>г.Ульяновск
-    </p>
+    <p className='footerText'>Football World- уникальный сайт футбольной статистики.</p>
+    <p className='footerText'>Компания © Football World. Все права защищены.</p>
+    <p className='footerText'>г.Ульяновск</p>
     </div>
 
 )

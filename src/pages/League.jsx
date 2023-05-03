@@ -4,7 +4,7 @@ import MainLeage from '../components/MainLeage/MainLeage';
 import Pag from '../components/Pag';
 import Footer from '../components/Footer';
 
-const Leage = () => {
+const League = () => {
     return (
 <React.Fragment>
 <Header />
@@ -16,4 +16,4 @@ const Leage = () => {
 
     )
 }
-export default Leage;
+export default League;

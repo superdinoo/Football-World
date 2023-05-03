@@ -15,10 +15,9 @@ const League = () => {
     async function fetchAllLigs() {
       try {
         const allLigs = await apiCreate.get();
-        console.log(allLigs);
         setLigs(allLigs.data.competitions);
       } catch (error) {
-        console.log(error);
+        console.error();
       }
 
     }
@@ -28,18 +27,18 @@ const League = () => {
 
   return ligs?.length ? (
     <div className={style.league}>
-      {ligs.map((liga) => {
+      {ligs.map(({id,name,area}) => {
         return (
           <LeagueCard
-            key={liga.id}
-            name={liga.name}
-            area={liga.area.name}
+            key={id}
+            name={name}
+            area={area.name}
           />
         );
       })}
     </div>
   ) : (
-    <p style={{ color: 'black' }}>Loading...</p>
+    <p className={style.text}>Loading...</p>
   );
   }
 export default League;

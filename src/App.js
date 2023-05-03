@@ -1,7 +1,7 @@
 import React from 'react';
 import { RouterProvider , createBrowserRouter } from 'react-router-dom';
 import Teams from './pages/Teams';
-import Leage from './pages/Leage';
+import League from './pages/League';
 import ErrorPage from './pages/ErrorPage';
 import './index.css';
 
@@ -9,7 +9,7 @@ function App() {
     const router = createBrowserRouter([
         {
           path: '/',
-          element: <Leage />,
+          element: <League />,
           errorElement: <ErrorPage />
         }, {
           path: '/teams',
