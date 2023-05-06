@@ -5,14 +5,12 @@ import BordsRight from '../BordsRight';
 import Centr from '../Centr';
 
 const MainComands = () => {
-    return (
-        <div className={style.mainleage}>
-        <BordsLeft />
-        <Centr />
-        <BordsRight />
-         
-        </div>
-        )
-
-    }
-export default MainComands
+  return (
+    <div className={style.mainleage}>
+      <BordsLeft />
+      <Centr />
+      <BordsRight />
+    </div>
+  );
+};
+export default MainComands;
