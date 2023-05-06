@@ -1,94 +1,35 @@
 import React from 'react';
-import './CentrStyle.css' ;
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import style from './CentrStyle.module.css';
+import TeamsCard from '../TeamsCard';
 
+const apiCreate = axios.create({
+  baseURL: 'https://api.football-data.org/v2/teams',
+  headers: { 'X-Auth-Token': 'dd127c2af68b49d9a207d889c5c7f97e' },
+});
 const Centr = () => {
-    return (
-    <div className='main'>
-        <div className='leftRig'>
-            <div className='lef'>
-                <img src="./img/lef.jpg"  alt="Наш логотип"/>
-            </div>  
-            <div className='rig'>
-                <img src="./img/rig.jpg"  alt="Наш логотип"/>  
-            </div>
-        </div>
-        <div className='espan'>
-            <div className='real'>
-            <a href = '/'className='real-button'><img src="./img/real.jpeg" alt="Наш логотип"/></a>
-            <p>Реал Мадрид</p>
-            <p>Испания</p>
-            </div>
-            <div className='betis'>
-            <a href = '/'className='betis-button'><img src="./img/betis.jpeg" alt="Наш логотип"/></a>
-            <p>Бетис</p>
-            <p>Испания</p>
-            </div>
-        </div>
-        <div className='portugal'>
-            <div className='benfica'>
-            <a href = '/'className='benfica-button'><img src="./img/benfica.jpeg" alt="Наш логотип"/></a>
-            <p>Бенфика</p>
-            <p>Португалия</p>
-            </div>
-            <div className='porty'>
-            <a href = '/'className='porty-button'><img src="./img/porty.jpg" alt="Наш логотип"/></a>
-            <p>Порту</p>
-            <p>Португалия</p>
-            </div>
-        </div>
-        <div className='german'>
-            <div className='bavaria'>
-            <a href = '/'className='bavaria-button'><img src="./img/bavaria.jpeg" alt="Наш логотип"/></a>
-            <p>Байрен Мюнхен</p>
-            <p>Германия</p>
-            </div>
-            <div className='borys'>
-            <a href = '/'className='borys-button'><img src="./img/borys.jpeg" alt="Наш логотип"/></a>
-            <p>Борусия Дортмун</p>
-            <p>Германия</p>
-            </div>
-        </div>
-        <div className='france'>
-            <div className='psg'>
-            <a href = '/'className='psg-button'><img src="./img/psg.jpeg" alt="Наш логотип"/></a>
-            <p>ПСЖ</p>
-            <p>Франция</p>
-            </div>
-            <div className='lion'>
-            <a href = '/'className='lion-button'><img src="./img/lion.jpeg" alt="Наш логотип"/></a>
-            <p>Лион</p>
-            <p>Франция</p>
-            </div>
-        </div>
-        <div className='Engl'>
-            <div className='manYna'>
-            <a href = '/'className='manYna-button'><img src="./img/manYna.jpg" alt="Наш логотип"/></a>
-            <p>Манчестер Юнайтед</p>
-            <p>Англия</p>
-            </div>
-            <div className='westhem'>
-            <a href = '/'className='westhem-button'><img src="./img/westhem.jpg" alt="Наш логотип"/></a>
-            <p>Вестхэм</p>
-            <p>Англия</p>
-            </div>
-        </div>
-        <div className='italy'>
-            <div className='yvent'>
-            <a href = '/'className='yvent-button'><img src="./img/yvent.jpeg" alt="Наш логотип"/></a>
-            <p>Ювентус</p>
-            <p>Италия</p>
-            </div>
-            <div className='inter'>
-            <a href = '/'className='inter-button'><img src="./img/inter.jpeg" alt="Наш логотип"/></a>
-            <p>Интер</p>
-            <p>Италия</p>
-            </div>
-        </div>
-
-
-
-    </div>
-
-        )
+  const [teams, setTeams] = useState([]);
+  useEffect(() => {
+    async function fetchAllTeams() {
+      try {
+        const allTeams = await apiCreate.get();
+        setTeams(allTeams.data.teams);
+      } catch (error) {
+        console.error();
+      }
     }
-export default Centr 
+    fetchAllTeams();
+  }, []);
+  return teams?.length ? (
+    <div className={style.posit}>
+      {teams.map(({ id, name, crestUrl }) => {
+        console.log(teams);
+        return <TeamsCard key={id} name={name} crestUrl={crestUrl} />;
+      })}
+    </div>
+  ) : (
+    <p className={style.loading}>Loading...</p>
+  );
+};
+export default Centr;

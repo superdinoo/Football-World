@@ -1,0 +1,12 @@
+
+.posit{
+    display: grid;
+    width: 65%;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 30px;
+    
+}

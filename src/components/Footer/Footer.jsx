@@ -1,13 +1,12 @@
 import React from 'react';
-import './Footerstyle.css' ;
+import style from './Footerstyle.module.css' ;
 
 const Footer = () => {
     return (
-    <div className='footer'>
-    <p>Football World- уникальный сайт футбольной статистики.
-    <br/>Компания © Football World. Все права защищены.
-    <br/>г.Ульяновск
-    </p>
+    <div className={style.footer}>
+    <p className={style.footerText}>Football World- уникальный сайт футбольной статистики.</p>
+    <p className={style.footerText}>Компания © Football World. Все права защищены.</p>
+    <p className={style.footerText}>г.Ульяновск</p>
     </div>
 
 )

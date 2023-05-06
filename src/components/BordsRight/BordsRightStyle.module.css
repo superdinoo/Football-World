@@ -1,0 +1,12 @@
+.leftRig{
+    display: flex;
+    justify-content: space-between;
+}
+.rig img{
+    border: 1px solid #000000;
+	background-color: black;
+	padding: 4px;
+    width: 522px;
+    height: 1200px;
+    
+}
