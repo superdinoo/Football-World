@@ -1,37 +1,37 @@
 import React from 'react';
-import './ErrorStyle.css' ;
+import style from './ErrorStyle.module.css' ;
 
 const Error = () => {
     return (
-        <div class="container">
-  <h1 class="first-four">4</h1>
-  <div class="cog-wheel1">
-      <div class="cog1">
-        <div class="top"></div>
-        <div class="down"></div>
-        <div class="left-top"></div>
-        <div class="left-down"></div>
-        <div class="right-top"></div>
-        <div class="right-down"></div>
-        <div class="left"></div>
-        <div class="right"></div>
+        <div class={style.container}>
+  <h1 class={style.firstFour}>4</h1>
+  <div class={style.cogWheel1}>
+      <div class={style.cog1}>
+        <div class={style.top}></div>
+        <div class={style.down}></div>
+        <div class={style.leftTop}></div>
+        <div class={style.leftDown}></div>
+        <div class={style.rightTop}></div>
+        <div class={style.rightDown}></div>
+        <div class={style.left}></div>
+        <div class={style.right}></div>
     </div>
   </div>
   
-  <div class="cog-wheel2"> 
-    <div class="cog2">
-        <div class="top"></div>
-        <div class="down"></div>
-        <div class="left-top"></div>
-        <div class="left-down"></div>
-        <div class="right-top"></div>
-        <div class="right-down"></div>
-        <div class="left"></div>
-        <div class="right"></div>
+  <div class={style.cogWheel2}> 
+    <div class={style.cog2}>
+        <div class={style.top}></div>
+        <div class={style.down}></div>
+        <div class={style.leftTop}></div>
+        <div class={style.leftDown}></div>
+        <div class={style.rightTop}></div>
+        <div class={style.rightDown}></div>
+        <div class={style.left}></div>
+        <div class={style.right}></div>
     </div>
   </div>
- <h1 class="second-four">4</h1>
-  <p class="wrong-para">Uh Oh! Page not found!</p>
+ <h1 class={style.secondFour}>4</h1>
+  <p class={style.wrongPara}>Uh Oh! Page not found!</p>
 </div>
 )
 
