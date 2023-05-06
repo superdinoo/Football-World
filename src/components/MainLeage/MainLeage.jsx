@@ -1,19 +1,18 @@
 import React from 'react';
-import style from './MainLeage.module.css';
+
+import LeaguesList from '../LeaguesList';
 import BordsLeft from '../BordsLeft';
 import BordsRight from '../BordsRight';
-import League from '../League';
+import style from './MainLeage.module.css';
 
+const MainLeage = ({ ligs }) => {
+  return (
+    <div className={style.mainleage}>
+      <BordsLeft />
+      <LeaguesList ligs={ligs} />
+      <BordsRight />
+    </div>
+  );
+};
 
-const MainLeage = () => {
-    return (
-        <div className={style.mainleage}>
-        <BordsLeft />
-        <League />
-        <BordsRight />
-         
-        </div>
-        )
-
-    }
-export default MainLeage
+export default MainLeage;
