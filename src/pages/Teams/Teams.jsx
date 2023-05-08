@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect, useMemo, memo } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import Header from '../../components/Header';
 import MainComands from '../../components/MainComands';
 import Footer from '../../components/Footer';
@@ -6,7 +6,7 @@ import { apiCreate } from './../../utils/api';
 import { Pagination } from 'antd';
 import style from '../Teams/TeamsStyle.module.css';
 
-const MAX_TEAMSCARD_PER_PAGE = 6;
+const MAX_TEAMSCARD_PER_PAGE = 12;
 
 const Teams = () => {
   const [teams, setTeams] = useState([]);
@@ -17,6 +17,7 @@ const Teams = () => {
       try {
         const allTeams = await apiCreate.get('/teams');
         setTeams(allTeams.data.teams);
+        console.log(allTeams);
       } catch (error) {
         console.error();
       }
@@ -28,7 +29,7 @@ const Teams = () => {
       MAX_TEAMSCARD_PER_PAGE * page - MAX_TEAMSCARD_PER_PAGE,
       MAX_TEAMSCARD_PER_PAGE * (page - 1) + MAX_TEAMSCARD_PER_PAGE
     );
-
+      
   return (
     <React.Fragment>
       <Header />
@@ -43,7 +44,6 @@ const Teams = () => {
               current={page}
               onChange={(page) => setPage(page)}
             />
-            ;
           </div>
         </Fragment>
       ) : (
@@ -53,4 +53,4 @@ const Teams = () => {
     </React.Fragment>
   );
 };
-export default memo(Teams);
+export default Teams;
