@@ -4,11 +4,11 @@ import BordsLeft from '../BordsLeft';
 import BordsRight from '../BordsRight';
 import Centr from '../Centr';
 
-const MainComands = () => {
+const MainComands = ({teams}) => {
   return (
     <div className={style.maincomands}>
       <BordsLeft />
-      <Centr />
+      <Centr teams={teams} />
       <BordsRight />
     </div>
   );
