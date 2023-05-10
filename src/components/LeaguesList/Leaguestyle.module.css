@@ -1,0 +1,21 @@
+.cardLeaguesWrap {
+    display: flex;
+    width: 1200px;
+    height: 1200px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(/public/img/pole.png);
+    flex-direction: column;
+    row-gap: 30px;
+    padding-top: 143px;
+    margin-top: 30px;
+    align-items: center;
+    justify-items: center;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  .line {
+    display: flex;
+    gap: 100px;
+  }
