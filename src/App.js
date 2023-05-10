@@ -1,8 +1,8 @@
 import React from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-// import Teams from './pages/Teams';
-import League from './pages/leagues';
-import ErrorPage from './pages/ErrorPage';
+import Teams from './pagess/Teams';
+import League from './pagess/League';
+import ErrorPage from './pagess/ErrorPage';
 import './index.css';
 
 function App() {
@@ -12,10 +12,10 @@ function App() {
       element: <League />,
       errorElement: <ErrorPage />,
     },
-    // {
-    //   path: '/teams',
-    //   element: <Teams />,
-    // },
+    {
+      path: '/teams',
+      element: <Teams />,
+    },
   ]);
   return <RouterProvider router={router} />;
 }

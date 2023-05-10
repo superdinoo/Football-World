@@ -1,6 +1,7 @@
 .leftRig{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    
 }
 .rig img{
     border: 1px solid #000000;

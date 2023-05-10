@@ -1,18 +1,16 @@
 import React from 'react';
-
-import LeaguesList from '../LeaguesList';
 import BordsLeft from '../BordsLeft';
 import BordsRight from '../BordsRight';
-import style from './MainLeage.module.css';
+import style from './MainLeageCalendar.module.css';
 
-const MainLeage = ({ ligs }) => {
+const MainLeageCalendar = () => {
   return (
     <div className={style.mainleage}>
       <BordsLeft />
-      <LeaguesList ligs={ligs} />
+    
       <BordsRight />
     </div>
   );
 };
 
-export default MainLeage;
+export default MainLeageCalendar;
