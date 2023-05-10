@@ -4,7 +4,8 @@ import styles from './Leaguestyle.module.css';
 
 const LeaguesList = ({ ligs }) => {
   return (
-    <div className={styles.cardCompetotoinsWrap}>
+    <div className={styles.cardLeaguesWrap}>
+
       <div>
         <LeagueCard
           key={ligs[0].id}
