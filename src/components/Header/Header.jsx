@@ -29,22 +29,7 @@ const Header = () => {
           </a>
         </div>
       </div>
-      <div className={style.headerWrap}>
-        <form className={style.form}>
-          <input
-            type='text'
-            name={style.text}
-            className={style.serch}
-            placeholder='Поиск Здесь!'
-          />
-          <button type='submit' name={style.submit} className={style.submit}>
-            Поиск
-          </button>
-        </form>
-        <a href='/'>
-          <img src='./img/men.png' alt='вход' className={style.men}/>
-        </a>
-      </div>
+
     </div>
   );
 };

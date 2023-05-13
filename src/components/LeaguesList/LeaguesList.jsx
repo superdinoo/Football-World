@@ -1,6 +1,7 @@
 import React from 'react';
 import LeagueCard from '../LeagueCard';
-import styles from './Leaguestyle.module.css';
+import styles from './LeaguesListStyle.module.css'
+
 
 const LeaguesList = ({ ligs }) => {
   return (
@@ -30,7 +31,8 @@ const LeaguesList = ({ ligs }) => {
       <div className={styles.line}>
         {ligs.slice(4, 6).map((liga) => {
           return (
-            <LeagueCard key={liga.id} name={liga.name} area={liga.area.name} />
+            <LeagueCard key={liga.id} name={liga.name} area={liga.area.name} /> 
+            
           );
         })}
       </div>

@@ -2,17 +2,17 @@ import React , { Fragment, useState, useEffect } from 'react';
 import BordsLeft from '../BordsLeft';
 import TableComp from '../TableComp';
 import BordsRight from '../BordsRight';
-import style from './MainLeageCalendar.module.css';
+import style from './MainLeague.module.css';
+import LeaguesList from '../LeaguesList';
 
-
-const MainLeageCalendar = () => {
+const MainLeague = ({ligs}) => {
   return (
     <div className={style.mainleage}>
       <BordsLeft />
-      <TableComp />
+      <LeaguesList ligs={ligs}/>
       <BordsRight />
     </div>
   );
 };
 
-export default MainLeageCalendar;
+export default MainLeague;

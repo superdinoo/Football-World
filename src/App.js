@@ -1,6 +1,7 @@
 import React from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import CompCalendar from './pagess/CompCalendar/CompCalendar';
+
+import League from './pagess/LeaguePages/League';
 import ErrorPage from './pagess/ErrorPage';
 import './index.css';
 
@@ -11,7 +12,7 @@ function App() {
       path: '/',
       element: <CompCalendar />,
       errorElement: <ErrorPage />,
-    },
+    }
   ]);
   return <RouterProvider router={router} />;
 }
