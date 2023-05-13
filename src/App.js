@@ -1,20 +1,16 @@
 import React from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Teams from './pagess/Teams';
-import League from './pagess/League';
+import CompCalendar from './pagess/CompCalendar/CompCalendar';
 import ErrorPage from './pagess/ErrorPage';
 import './index.css';
+
 
 function App() {
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <League />,
+      element: <CompCalendar />,
       errorElement: <ErrorPage />,
-    },
-    {
-      path: '/teams',
-      element: <Teams />,
     },
   ]);
   return <RouterProvider router={router} />;
