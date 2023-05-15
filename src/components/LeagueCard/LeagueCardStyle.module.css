@@ -1,0 +1,27 @@
+.LeagueCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.LeagueCard img{
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    border-radius: 30px;
+    height: 130px;
+    width: 130px;
+}
+.cards{
+    color: white;
+    font-size: 25px;
+    
+   
+
+}
+.LeagueCardButton{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 7px;
+    text-decoration: none;
+
+}

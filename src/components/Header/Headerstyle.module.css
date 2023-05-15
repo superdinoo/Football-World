@@ -1,5 +1,5 @@
 .header{
-    padding: 15px 20px;
+    padding: 10px 0px;
     background: #990000;
     color:white;
 }
@@ -16,15 +16,6 @@ gap: 70px;
 .icone{
     width: 23px;
     height: 23px;
-}
-.form {
-margin-top: 35px;
-display: flex;
-margin-left: 130px;
-}
-.serch {
-    width: 1600px;
-    height: 20px;
 }
 .social {
     gap: 15px;
