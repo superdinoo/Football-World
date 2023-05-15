@@ -1,36 +1,9 @@
-// import  React from 'react';
-// import style from './TableCompStyle.module.css';
-
-
-// const TableComp = () => {
-//     return (
-// <div className={style.table}>
-
-
-
-
-//     </div>
-
-
-
-
-//     )
-// } 
-//  export default TableComp;
-
 import React from 'react';
 import { Space, Table, Tag } from 'antd';
 
 
-interface DataType {
-  key: string;
-  name: string;
-  age: number;
-  address: string;
-  tags: string[];
-}
 
-const columns: ColumnsType<DataType> = [
+const columns = [
   {
     title: 'Name',
     dataIndex: 'name',
@@ -80,7 +53,7 @@ const columns: ColumnsType<DataType> = [
   },
 ];
 
-const data: DataType[] = [
+const data= [
   {
     key: '1',
     name: 'John Brown',
@@ -104,7 +77,7 @@ const data: DataType[] = [
   },
 ];
 
-const TableComp: React.FC = () => <Table columns={columns} dataSource={data} />;
+const TableComp = () => <Table columns={columns} dataSource={data} />;
 
 export default TableComp;
 

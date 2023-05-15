@@ -1,6 +1,5 @@
-import React , { Fragment, useState, useEffect } from 'react';
+import React from 'react';
 import BordsLeft from '../BordsLeft';
-import TableComp from '../TableComp';
 import BordsRight from '../BordsRight';
 import style from './MainLeague.module.css';
 import LeaguesList from '../LeaguesList';

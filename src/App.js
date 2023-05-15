@@ -10,7 +10,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <CompCalendar />,
+      element: <League />,
       errorElement: <ErrorPage />,
     }
   ]);
