@@ -65,7 +65,25 @@ const resetSearch = () => {
     setFilteredLigs(ligs);
     setSearchValue("");
   };
-
+  const allMainLigs = () => {
+    return ligs.length ? (
+      <Fragment>
+        <MainLeague ligs={getCompetitions()} />
+        <div className={style.pagination}>
+          <Pagination
+            current={page}
+            onChange={(page) => setPage(page)}
+            pageSize={MAX_LEAGUESLIST_PER_PAGE}
+            showSizeChanger={false}
+            total={filteredLigs?.length}
+          />
+        </div>
+        <Footer />
+      </Fragment>
+    ) : (
+      <p className={style.loading}>Loading...</p>
+    );
+  };
   return (
     <div className={style.competition}>
       <Header />
@@ -92,23 +110,8 @@ const resetSearch = () => {
       </form>
       {!filteredLigs.length && ligs.length ? (
         <p className={style.non}>Ничего не найдено</p>
-      ) : ligs.length ? (
-        <Fragment>
-          <MainLeague ligs={getCompetitions()} />
-          <div className={style.pagination}>
-            <Pagination
-              current={page}
-              onChange={(page) => setPage(page)}
-              pageSize={MAX_LEAGUESLIST_PER_PAGE}
-              showSizeChanger={false}
-              total={filteredLigs?.length}
-            />
-           
-          </div> 
-          <Footer />
-        </Fragment>
       ) : (
-        <p className={style.loading}>Loading...</p>
+        allMainLigs()
       )}
     </div>
   );
