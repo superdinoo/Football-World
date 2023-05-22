@@ -13,17 +13,44 @@ display: flex;
 gap: 70px;
 
 }   
+@media (max-width:415px){
+    .headerMain{
+        gap: 35px;
+
+    }
+}
+
 .icone{
     width: 23px;
     height: 23px;
+}
+@media (max-width:415px) {
+    .icone{
+    width: 17px;
+    height: 17px;
+    }
+
+    
 }
 .social {
     gap: 15px;
     display: flex; 
 }
-.men{
-    width: 50px;
-    height: 50px;
+@media (max-width:1920px) {
+    .social{
+    margin-right: 4px;
+    }
+
+    
+}
+@media (max-width:415px) {
+    .social{
+    margin-right: 4px;
+    margin-bottom: 52px;
+    gap: 10px;
+    }
+
+    
 }
 .headerButton{
     display: flex;
@@ -37,5 +64,15 @@ gap: 70px;
     text-align: center;
     border: 1px solid black;
 
+}
+@media (max-width:415px) {
+    .headerButton{
+        height: 40px;
+        width: 90px;
+        margin-top: 20px;
+        font-size: 20px;
+    }
+
+    
 }
 .headerButton:hover{background-color: #fcfcfc;}
