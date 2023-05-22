@@ -7,7 +7,7 @@ const Header = () => {
     <div className={style.header}>
       <div className={style.headerWrap}>
         <div className={style.headerMain}>
-          <div className={style.img}>
+          <div className={style.logo}>
             <img src='./img/logo.png' alt='Наш логотип' />
           </div>
           <Link to='/' className={style.headerButton}>

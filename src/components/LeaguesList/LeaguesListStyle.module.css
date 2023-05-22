@@ -14,6 +14,29 @@
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
   }
+  @media (max-width:1920px) {
+    .cardLeaguesWrap{
+        row-gap: 20px;
+    }
+    
+}
+@media (max-width:1366px) {
+  .cardLeaguesWrap{
+      margin-top: 0px;
+      background-image: none;
+      
+  }
+  
+}
+@media (max-width:415px) {
+  .cardLeaguesWrap{
+      display: flex;
+      flex-direction: column;
+      background-image: none;
+      margin-top:-100px;
+  }
+  
+}
   
   .line {
     display: flex;
