@@ -6,6 +6,7 @@ import Footer from '../../components/Footer';
 import { apiCreate } from './../../utils/api';
 import { Pagination } from 'antd';
 import style from '../Teams/TeamsStyle.module.css';
+import Loader from '../../components/Loader/Loader';
 
 
 const MAX_TEAMSCARD_PER_PAGE = 12;
@@ -94,7 +95,7 @@ const resetSearch = () => {
           <Footer />
         </Fragment>
       ) : (
-        <p className={style.loading}>Loading...</p>
+        <Loader/>
       )}
     </div>
   );
