@@ -7,8 +7,10 @@ const Header = () => {
     <div className={style.header}>
       <div className={style.headerWrap}>
         <div className={style.headerMain}>
-          <div className={style.img}>
+          <div className={style.logo}>
+            <Link to='/'>
             <img src='/img/logo.png' alt='Наш логотип' />
+            </Link>
           </div>
           <Link to='/' className={style.headerButton}>
             Лиги
