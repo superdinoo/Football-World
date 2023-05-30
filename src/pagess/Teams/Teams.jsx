@@ -1,15 +1,14 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { Fragment, useState, useEffect } from "react";
 import { SearchOutlined } from "@ant-design/icons";
-import Header from '../../components/Header';
-import MainComands from '../../components/MainComands';
-import Footer from '../../components/Footer';
-import { apiCreate } from './../../utils/api';
-import { Pagination } from 'antd';
-import style from '../Teams/TeamsStyle.module.css';
-import Loader from '../../components/Loader/Loader';
-
-
-const MAX_TEAMSCARD_PER_PAGE = 12;
+import Header from "../../components/Header";
+import MainComands from "../../components/MainComands";
+import Footer from "../../components/Footer";
+import { apiCreate } from "./../../utils/api";
+import { Pagination } from "antd";
+import style from "../Teams/TeamsStyle.module.css";
+import Loader from "../../components/Loader/Loader";
+import { filterByField } from "../../utils/utils";
+import { MAX_TEAMSCARD_PER_PAGE } from "../../utils/constant";
 
 const Teams = () => {
   const [teams, setTeams] = useState([]);
@@ -24,7 +23,7 @@ const Teams = () => {
         setTeams(allTeams.data.teams);
         setFilteredTeams(allTeams.data.teams);
       } catch (error) {
-        console.error();
+        console.log(error, "ошибка запроса команд");
       }
     }
     fetchAllTeams();
@@ -42,25 +41,27 @@ const Teams = () => {
       return;
     }
 
-    const filteredTeamsByName = teams.filter((team) =>
-      team.name.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase())
-    );
- 
+    const filteredTeamsByName = filterByField(teams, "name", searchValue);
+
     setFilteredTeams(filteredTeamsByName);
   };
-const resetSearch = () => {
+  const resetSearch = () => {
     setFilteredTeams(teams);
     setSearchValue("");
   };
+
+
+  const handleSumbit = (e) => {
+    e.preventDefault();
+    searchTeams();
+  }
+
 
   return (
     <div className={style.competition}>
       <Header />
       <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          searchTeams();
-        }}
+        onSubmit={handleSumbit}
       >
         <div className={style.form}>
           <input
@@ -90,12 +91,11 @@ const resetSearch = () => {
               showSizeChanger={false}
               total={filteredTeams?.length}
             />
-           
-          </div> 
+          </div>
           <Footer />
         </Fragment>
       ) : (
-        <Loader/>
+        <Loader />
       )}
     </div>
   );

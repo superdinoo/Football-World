@@ -3,25 +3,12 @@
     flex-direction: column;
     align-items: center;
 }
-@media (max-width:415px) {
-    .TeamsCard {
-        font-size: 24px;
-        
-    }
-}
 .TeamsCard img{
     background-color: rgb(255, 255, 255);
     border: 2px solid black;
     border-radius: 30px;
     height: 130px;
     width: 130px;
-}
-@media (max-width:1366px) {
-    .TeamsCard img{
-        height: 100px;
-        width:100px;
-        
-    }
 }
 .cards{
     color: white;
@@ -36,11 +23,9 @@
         text-align: center;
         
     }
-}
-@media (max-width:415px) {
-    .cards {
-        font-size: 20px;
-        text-align: center;
+    .TeamsCard img{
+        height: 100px;
+        width:100px;
         
     }
 }
@@ -55,6 +40,15 @@
 @media (max-width:415px) {
     .TeamsCardButton {
         flex-direction: column-reverse;
+        
+    }
+    .TeamsCard {
+        font-size: 24px;
+        
+    }
+    .cards {
+        font-size: 20px;
+        text-align: center;
         
     }
 }

@@ -2,25 +2,24 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Breadcrumb } from "antd";
 import { apiCreate } from "../../utils/api";
-
 import styles from "./BreadCrumbStyles.module.css";
 
-const BreadCrumbComponent = () => {
-  const [nameTeam, setNameTeam] = useState([]);
+const BreadCrumbComponent = ({ apiEndpoint, title }) => {
+  const [name, setName] = useState([]);
 
   const { id } = useParams();
 
   useEffect(() => {
-    async function fetchMatches() {
+    async function fetchData() {
       try {
-        const nameTeam = await apiCreate.get(`/teams/${id}`);
-        setNameTeam(nameTeam.data.name);
+        const response = await apiCreate.get(`${apiEndpoint}/${id}`);
+        setName(response.data.name);
       } catch (error) {
         console.error();
       }
     }
-    fetchMatches();
-  }, [id]);
+    fetchData();
+  }, [apiEndpoint, id]);
 
   return (
     <Breadcrumb
@@ -30,16 +29,17 @@ const BreadCrumbComponent = () => {
       items={[
         {
           title: (
-            <a href="/teams">
-              <p className={styles.breadcrumbWrapText}> Команды</p>
+            <a href={`/${apiEndpoint}`}>
+              <p className={styles.breadcrumbWrapText}>{title}</p>
             </a>
           ),
         },
         {
-          title: <p className={styles.breadcrumbWrapText}>{nameTeam}</p>,
+          title: <p className={styles.breadcrumbWrapText}>{name}</p>,
         },
       ]}
     />
   );
 };
+
 export default BreadCrumbComponent;

@@ -1,31 +1,15 @@
-.LeagueCard{
+.leagueCard{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-@media (max-width:415px) {
-    .LeagueCard{
-        display: flex;
-    flex-direction: column;
-    align-items: center;
-    }
-    
-}
-.LeagueCard img{
+.leagueCard img{
     background-color: rgb(255, 255, 255);
     border: 2px solid black;
     border-radius: 30px;
     height: 130px;
     width: 130px;
 }
-@media (max-width:1920px) {
-    .LeagueCard img{
-        height: 110px;
-        width: 110px;
-    }
-    
-}
-
 .cards{
     color: white;
     font-size: 25px;
@@ -34,6 +18,10 @@
 @media (max-width:1920px) {
     .cards{
         font-size: 20px;
+    }
+    .LeagueCard img{
+        height: 110px;
+        width: 110px;
     }
     
 }
@@ -49,13 +37,21 @@
         font-size: 14px;
         text-align: center;
     }
+    .LeagueCard{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
     
 }
-.LeagueCardButton{
+.leagueCardButton{
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 7px;
     text-decoration: none;
 
+}
+.link{
+    text-decoration: none;
 }

@@ -6,12 +6,12 @@ import TeamsCard from '../TeamsCard';
 const Centr = ({teams}) => {
   return (
     <div className={style.posit}>
-      {teams.map(team => (
+      {teams.map(({id,name,crestUrl}) => (
         <TeamsCard 
-        key={team.id} 
-        id={team.id}
-        name={team.name} 
-        crestUrl={team.crestUrl} />
+        key={id} 
+        id={id}
+        name={name} 
+        crestUrl={crestUrl} />
       ))}
     </div>
   );

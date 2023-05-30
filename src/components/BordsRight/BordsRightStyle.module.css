@@ -3,11 +3,6 @@
     justify-content: flex-end;
     
 }
-@media (max-width:415px) {
-    .leftRig{
-        display: none;
-    }
-}
 .rig img{
     border: 1px solid #000000;
 	background-color: black;
@@ -27,5 +22,10 @@
     .rig img{
         width: 400px;
         height: 930px;
+    }
+}
+@media (max-width:415px) {
+    .leftRig{
+        display: none;
     }
 }

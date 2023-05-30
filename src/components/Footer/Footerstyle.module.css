@@ -9,16 +9,16 @@
     margin-top: 30px;
     
  }
- @media (max-width:415px) {
-    .footer{
-        padding: 42px 20px;
-    }
-    
-}
 .footerTextQ{
     margin-top: 10px;
 }
 
+.footerTextW{
+    margin-top: 10px;
+}
+.footerTextE{
+    margin-top: 10px;
+}
 @media (max-width:1920px) {
     .footerTextQ{
         margin-right: 0px;
@@ -26,20 +26,14 @@
     
 }
 @media (max-width:415px) {
+    .footerTextE{
+        margin-top: 10px; 
+    }
     .footerTextQ{
         display: none;
     }
-    
-}
-.footerTextW{
-    margin-top: 10px;
-}
-.footerTextE{
-    margin-top: 10px;
-}
-@media (max-width:415px) {
-    .footerTextE{
-        margin-top: 10px; 
+    .footer{
+        padding: 42px 20px;
     }
     
 }

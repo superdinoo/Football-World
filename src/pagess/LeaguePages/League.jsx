@@ -1,12 +1,15 @@
-import React, { Fragment,useEffect,useState } from 'react';import { SearchOutlined } from "@ant-design/icons";
-import {Pagination} from 'antd';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import { apiCreate } from '../../utils/api';
-import style from './LeagueStyle.module.css';
-import MainLeague from '../../components/MainLeague';
+import React, { Fragment, useEffect, useState } from "react";
+import { SearchOutlined } from "@ant-design/icons";
+import { Pagination } from "antd";
 
-const MAX_LEAGUESLIST_PER_PAGE = 6;
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+import { apiCreate } from "../../utils/api";
+import { MAX_LEAGUESLIST_PER_PAGE } from "../../utils/constant";
+import MainLeague from "../../components/MainLeague";
+import { filterByField } from "../../utils/utils";
+
+import style from "./LeagueStyle.module.css";
 
 const League = () => {
   const [ligs, setLigs] = useState([]);
@@ -21,7 +24,7 @@ const League = () => {
         setLigs(allLigs.data.competitions);
         setFilteredLigs(allLigs.data.competitions);
       } catch (error) {
-        console.error();
+        console.log(error, "ошибка запроса лиг");
       }
     }
     fetchAllLigs();
@@ -39,15 +42,10 @@ const League = () => {
       return;
     }
 
-    const filteredLigsByName = ligs.filter((liga) =>
-      liga.name.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase())
-    );
+    const filteredLigsByName = filterByField(ligs, "name", searchValue);
 
-    const filteredLigsByCountry = ligs.filter((liga) =>
-      liga.area.name
-        .toLocaleLowerCase()
-        .includes(searchValue.toLocaleLowerCase())
-    );
+    const filteredLigsByCountry = filterByField(ligs, "area", searchValue);
+
     const allFilteredLigs = [...filteredLigsByCountry, ...filteredLigsByName];
 
     const ids = new Set(allFilteredLigs.map(({ id }) => id));
@@ -56,24 +54,47 @@ const League = () => {
         ids.delete(id);
         return true;
       }
-       return false;
+      return false;
     });
-     
+
     setFilteredLigs(uniqueLigs);
   };
-const resetSearch = () => {
+  const resetSearch = () => {
     setFilteredLigs(ligs);
     setSearchValue("");
   };
+  const allMainLigs = () => {
+    return ligs.length ? (
+      <Fragment>
+        <MainLeague ligs={getCompetitions()} />
+        <div className={style.pagination}>
+          <Pagination
+            current={page}
+            onChange={(page) => setPage(page)}
+            pageSize={MAX_LEAGUESLIST_PER_PAGE}
+            showSizeChanger={false}
+            total={filteredLigs?.length}
+          />
+        </div>
+        <Footer />
+      </Fragment>
+    ) : (
+      <p className={style.loading}>Loading...</p>
+    );
+  };
+
+
+
+  const handleSumbit = (e) => {
+    e.preventDefault();
+    searchLigs();
+  }
 
   return (
     <div className={style.competition}>
       <Header />
       <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          searchLigs();
-        }}
+        onSubmit={handleSumbit}
       >
         <div className={style.form}>
           <input
@@ -92,27 +113,11 @@ const resetSearch = () => {
       </form>
       {!filteredLigs.length && ligs.length ? (
         <p className={style.non}>Ничего не найдено</p>
-      ) : ligs.length ? (
-        <Fragment>
-          <MainLeague ligs={getCompetitions()} />
-          <div className={style.pagination}>
-            <Pagination
-              current={page}
-              onChange={(page) => setPage(page)}
-              pageSize={MAX_LEAGUESLIST_PER_PAGE}
-              showSizeChanger={false}
-              total={filteredLigs?.length}
-            />
-           
-          </div> 
-          <Footer />
-        </Fragment>
       ) : (
-        <p className={style.loading}>Loading...</p>
+        allMainLigs()
       )}
     </div>
   );
 };
 
 export default League;
-
