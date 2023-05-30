@@ -7,6 +7,7 @@ import LeagueCalendar from "./pagess/LeagueCalendar";
 import Error from "./components/Error";
 import "./index.css";
 
+
 function App() {
   const router = createBrowserRouter([
     {
@@ -25,8 +26,8 @@ function App() {
     },
     {
       path: `/competitions/:id/matches`,
-      element: <LeagueCalendar />,
-    },
+      element:<LeagueCalendar />
+    }  
   ]);
   return <RouterProvider router={router} />;
 }
