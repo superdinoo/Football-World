@@ -1,2 +1,2 @@
 import BordsLeft from "./BordsLeft";
-export default BordsLeft
+export default BordsLeft;

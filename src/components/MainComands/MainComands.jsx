@@ -1,10 +1,10 @@
-import React from 'react';
-import style from './MainComands.module.css';
-import BordsLeft from '../BordsLeft';
-import BordsRight from '../BordsRight';
-import Centr from '../Centr';
+import React from "react";
+import style from "./MainComands.module.css";
+import BordsLeft from "../BordsLeft";
+import BordsRight from "../BordsRight";
+import Centr from "../Centr";
 
-const MainComands = ({teams}) => {
+const MainComands = ({ teams }) => {
   return (
     <div className={style.maincomands}>
       <BordsLeft />

@@ -58,8 +58,7 @@ const statusMatches = {
   CANCELED: "Отменён",
 };
 const LeagueTable = ({ matchesLeague }) => {
-  if (!matchesLeague.length) 
-  return <Error403 />;
+  if (!matchesLeague.length) return <Error403 />;
 
   const checkScore = (value) => {
     if (value === null) {
@@ -103,9 +102,7 @@ const LeagueTable = ({ matchesLeague }) => {
     };
   });
 
-
   return <Table columns={columns} dataSource={customData} />;
-  
 };
 
 export default LeagueTable;

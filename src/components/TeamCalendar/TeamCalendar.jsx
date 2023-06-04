@@ -26,7 +26,7 @@ const TeamCalendar = () => {
   return (
     <React.Fragment>
       <Header />
-      <BreadCrumbComponent apiEndpoint="teams" title="Команды" /> 
+      <BreadCrumbComponent apiEndpoint="teams" title="Команды" />
       <p>Матчи</p>
       <TeamTable matchesTeams={matchesTeams} />
       <Footer />

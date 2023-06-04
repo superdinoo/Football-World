@@ -9,6 +9,7 @@ import style from "../Teams/TeamsStyle.module.css";
 import Loader from "../../components/Loader/Loader";
 import { filterByField } from "../../utils/utils";
 import { MAX_TEAMSCARD_PER_PAGE } from "../../utils/constant";
+import { Search } from "../../components/Search/Search";
 
 const Teams = () => {
   const [teams, setTeams] = useState([]);
@@ -50,34 +51,20 @@ const Teams = () => {
     setSearchValue("");
   };
 
-
   const handleSumbit = (e) => {
     e.preventDefault();
     searchTeams();
-  }
-
+  };
 
   return (
     <div className={style.competition}>
       <Header />
-      <form
-        onSubmit={handleSumbit}
-      >
-        <div className={style.form}>
-          <input
-            placeholder="Поиск..."
-            value={searchValue}
-            onChange={(event) => setSearchValue(event.target.value)}
-            className={style.serch}
-          />
-          <button className={style.submit}>
-            <SearchOutlined />
-          </button>
-          <button className={style.sbros} onClick={resetSearch}>
-            сбросить
-          </button>
-        </div>
-      </form>
+      <Search
+        searchValue={searchValue}
+        searchEntities={searchTeams}
+        resetSearch={resetSearch}
+        setSearchValue={setSearchValue}
+      />
       {!filteredTeams.length && teams.length ? (
         <p className={style.non}>Ничего не найдено</p>
       ) : teams.length ? (

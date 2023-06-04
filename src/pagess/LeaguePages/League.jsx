@@ -1,14 +1,13 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { SearchOutlined } from "@ant-design/icons";
 import { Pagination } from "antd";
-
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { apiCreate } from "../../utils/api";
 import { MAX_LEAGUESLIST_PER_PAGE } from "../../utils/constant";
 import MainLeague from "../../components/MainLeague";
 import { filterByField } from "../../utils/utils";
-
+import { Search } from "../../components/Search/Search";
 import style from "./LeagueStyle.module.css";
 
 const League = () => {
@@ -83,34 +82,20 @@ const League = () => {
     );
   };
 
-
-
   const handleSumbit = (e) => {
     e.preventDefault();
     searchLigs();
-  }
+  };
 
   return (
     <div className={style.competition}>
       <Header />
-      <form
-        onSubmit={handleSumbit}
-      >
-        <div className={style.form}>
-          <input
-            placeholder="Поиск..."
-            value={searchValue}
-            onChange={(event) => setSearchValue(event.target.value)}
-            className={style.serch}
-          />
-          <button className={style.submit}>
-            <SearchOutlined />
-          </button>
-          <button className={style.sbros} onClick={resetSearch}>
-            сбросить
-          </button>
-        </div>
-      </form>
+      <Search
+        searchValue={searchValue}
+        searchEntities={searchLigs}
+        resetSearch={resetSearch}
+        setSearchValue={setSearchValue}
+      />
       {!filteredLigs.length && ligs.length ? (
         <p className={style.non}>Ничего не найдено</p>
       ) : (

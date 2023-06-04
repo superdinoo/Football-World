@@ -1,20 +1,18 @@
-.posit{
-    display: grid;
-    width: 65%;
-    margin: auto;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    justify-items: center;
-    align-items: center;
-    gap: 30px;
-    
+.posit {
+  display: grid;
+  width: 65%;
+  margin: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  gap: 30px;
 }
-@media (max-width:415px) {
-    .posit{
-        width: 70%;
-        gap:50px;
-        align-items: start;
-        margin-top: 40px;
-    }
-    
+@media (max-width: 415px) {
+  .posit {
+    width: 70%;
+    gap: 50px;
+    align-items: start;
+    margin-top: 40px;
+  }
 }

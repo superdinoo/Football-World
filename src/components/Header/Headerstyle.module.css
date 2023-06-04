@@ -1,67 +1,63 @@
-.header{
-    padding: 10px 0px;
-    background: #990000;
-    color:white;
+.header {
+  padding: 10px 0px;
+  background: #990000;
+  color: white;
 }
-.headerWrap{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.headerWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .headerMain {
-display: flex;
-gap: 70px;
-
-}   
-.icone{
-    width: 23px;
-    height: 23px;
+  display: flex;
+  gap: 70px;
+}
+.icone {
+  width: 23px;
+  height: 23px;
 }
 .social {
-    gap: 15px;
-    display: flex; 
+  gap: 15px;
+  display: flex;
 }
 
-.headerButton{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    height: 50px;
-    text-decoration: none;
-    color: black;
-    border-radius: 10px;
-    text-align: center;
-    border: 1px solid black;
-
+.headerButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 50px;
+  text-decoration: none;
+  color: black;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid black;
 }
-@media (max-width:1920px) {
-    .social{
+@media (max-width: 1920px) {
+  .social {
     margin-right: 4px;
-    }
-
-    
+  }
 }
-@media (max-width:415px) {
-    .headerButton{
-        height: 40px;
-        width: 90px;
-        margin-top: 20px;
-        font-size: 20px;
-    }
-    .headerMain{
-        gap: 35px;
-
-    }
-    .icone{
-        width: 17px;
-        height: 17px;
-        }
-        .social{
-            margin-right: 4px;
-            margin-bottom: 52px;
-            gap: 10px;
-            }
-    
+@media (max-width: 415px) {
+  .headerButton {
+    height: 40px;
+    width: 90px;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  .headerMain {
+    gap: 35px;
+  }
+  .icone {
+    width: 17px;
+    height: 17px;
+  }
+  .social {
+    margin-right: 4px;
+    margin-bottom: 52px;
+    gap: 10px;
+  }
 }
-.headerButton:hover{background-color: #fcfcfc;}
+.headerButton:hover {
+  background-color: #fcfcfc;
+}

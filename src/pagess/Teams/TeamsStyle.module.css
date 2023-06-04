@@ -1,70 +1,68 @@
 .pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
 }
-.text{
-    color: white;
+.text {
+  color: white;
 }
 .form {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    }
-.serch {    
-       background-color: #990000;
-       color: white;
-        border-radius: 10px;
-        width: 1200px;
-        height: 25px;
-        border: 2px solid white;
-    }
-    @media (max-width:1920px) {
-        .serch{
-            width: 750px;
-        }
-        .pagination {
-            margin-right: 0px;
-            margin-top: 100px;
-        }
-        .form{
-            margin-right: 46px;
-        }
-    }
-    @media (max-width:1366px) {
-        .serch{
-        
-            width: 400px;
-        }
-        .form{
-            margin-right: 0px;
-        }
-    }
-    @media (max-width:415px) {
-        .serch{
-            width: 260px;
-        }
-        .form{
-            margin-right: 0px;
-        }
-    }
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.serch {
+  background-color: #990000;
+  color: white;
+  border-radius: 10px;
+  width: 1200px;
+  height: 25px;
+  border: 2px solid white;
+}
+@media (max-width: 1920px) {
+  .serch {
+    width: 750px;
+  }
+  .pagination {
+    margin-right: 0px;
+    margin-top: 100px;
+  }
+  .form {
+    margin-right: 46px;
+  }
+}
+@media (max-width: 1366px) {
+  .serch {
+    width: 400px;
+  }
+  .form {
+    margin-right: 0px;
+  }
+}
+@media (max-width: 415px) {
+  .serch {
+    width: 260px;
+  }
+  .form {
+    margin-right: 0px;
+  }
+}
 .submit {
-    border: 2px solid white;
-    background-color: #990000;
-    border-radius: 10px;
-    width: 60px;
-    color: white;
+  border: 2px solid white;
+  background-color: #990000;
+  border-radius: 10px;
+  width: 60px;
+  color: white;
 }
-.sbros{
-    border-radius: 10px;
-    border: 2px solid white;
-    background-color: #990000;
-    color:white;
-
+.sbros {
+  border-radius: 10px;
+  border: 2px solid white;
+  background-color: #990000;
+  color: white;
 }
-.non{
-    color: white;
+.non {
+  color: white;
 }
-.loading{
-    color: white;
+.loading {
+  color: white;
 }

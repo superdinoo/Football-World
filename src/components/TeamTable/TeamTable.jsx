@@ -102,9 +102,7 @@ const TeamTable = ({ matchesTeams }) => {
     };
   });
 
-
   return <Table columns={columns} dataSource={customData} />;
-  
 };
 
 export default TeamTable;
