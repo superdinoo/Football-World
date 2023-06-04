@@ -1,0 +1,28 @@
+.leftRig {
+  display: flex;
+  justify-content: flex-end;
+}
+.rig img {
+  border: 1px solid #000000;
+  background-color: black;
+  padding: 4px;
+  width: 522px;
+  height: 1200px;
+}
+@media (max-width: 1920px) {
+  .rig img {
+    width: 460px;
+    height: 1138px;
+  }
+}
+@media (max-width: 1366px) {
+  .rig img {
+    width: 400px;
+    height: 930px;
+  }
+}
+@media (max-width: 415px) {
+  .leftRig {
+    display: none;
+  }
+}

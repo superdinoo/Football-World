@@ -1,0 +1,45 @@
+.TeamsCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.TeamsCard img {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid black;
+  border-radius: 30px;
+  height: 130px;
+  width: 130px;
+}
+.cards {
+  color: white;
+  font-size: 25px;
+}
+@media (max-width: 1366px) {
+  .cards {
+    font-size: 18px;
+    text-align: center;
+  }
+  .TeamsCard img {
+    height: 100px;
+    width: 100px;
+  }
+}
+.TeamsCardButton {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 7px;
+  text-decoration: none;
+}
+@media (max-width: 415px) {
+  .TeamsCardButton {
+    flex-direction: column-reverse;
+  }
+  .TeamsCard {
+    font-size: 24px;
+  }
+  .cards {
+    font-size: 20px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,40 @@
+.cardLeaguesWrap {
+  display: flex;
+  width: 1200px;
+  height: 1200px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(/public/img/pole.png);
+  flex-direction: column;
+  row-gap: 30px;
+  padding-top: 143px;
+  margin-top: 30px;
+  align-items: center;
+  justify-items: center;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+@media (max-width: 1920px) {
+  .cardLeaguesWrap {
+    row-gap: 20px;
+  }
+}
+@media (max-width: 1366px) {
+  .cardLeaguesWrap {
+    margin-top: 0px;
+    background-image: none;
+  }
+}
+@media (max-width: 415px) {
+  .cardLeaguesWrap {
+    display: flex;
+    flex-direction: column;
+    background-image: none;
+    margin-top: -100px;
+  }
+}
+
+.line {
+  display: flex;
+  gap: 100px;
+}

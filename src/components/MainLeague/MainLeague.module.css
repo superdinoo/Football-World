@@ -1,0 +1,19 @@
+.mainleage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 1920px) {
+  .mainleage {
+    align-items: flex-start;
+    margin-right: 0px;
+    padding-top: 10px;
+  }
+}
+@media (max-width: 415px) {
+  .mainleage {
+    align-items: flex-start;
+    margin-right: 0px;
+    padding-top: 10px;
+  }
+}

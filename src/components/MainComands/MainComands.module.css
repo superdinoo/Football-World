@@ -1,0 +1,9 @@
+.maincomands {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1920px) {
+  .maincomands {
+    margin-top: 30px;
+  }
+}

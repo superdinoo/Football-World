@@ -1,0 +1,2 @@
+export const MAX_LEAGUESLIST_PER_PAGE = 6;
+export const MAX_TEAMSCARD_PER_PAGE = 12;
