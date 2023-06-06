@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Football-World/static/css/main.8ee57e58.css",
-    "main.js": "/Football-World/static/js/main.ca492aa3.js",
-    "static/media/pole.png": "/Football-World/static/media/pole.81e5c65700eef10756cc.png",
-    "index.html": "/Football-World/index.html",
-    "main.8ee57e58.css.map": "/Football-World/static/css/main.8ee57e58.css.map",
-    "main.ca492aa3.js.map": "/Football-World/static/js/main.ca492aa3.js.map"
+    "main.css": "/footballworld/static/css/main.0c56fb1e.css",
+    "main.js": "/footballworld/static/js/main.ca492aa3.js",
+    "static/media/pole.png": "/footballworld/static/media/pole.81e5c65700eef10756cc.png",
+    "index.html": "/footballworld/index.html",
+    "main.0c56fb1e.css.map": "/footballworld/static/css/main.0c56fb1e.css.map",
+    "main.ca492aa3.js.map": "/footballworld/static/js/main.ca492aa3.js.map"
   },
   "entrypoints": [
-    "static/css/main.8ee57e58.css",
+    "static/css/main.0c56fb1e.css",
     "static/js/main.ca492aa3.js"
   ]
 }
